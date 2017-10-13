@@ -12,8 +12,6 @@ int main()
 
         if (std::is_permutation(firstNum.begin(), firstNum.end(), secondNum.begin()))
         {
-            std::cout << firstNum << std::endl;
-            std::cout << secondNum << std::endl;
             std::cout << n << std::endl;
             break;
         }
