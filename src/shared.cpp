@@ -39,14 +39,14 @@ namespace math
         return primes;
     }
 
-    std::map<long, int> getFactors(long n)
+    FactForm getFactors(long n)
     {
         return getFactors(n, getPrimesNotGreaterThan(n));
     }
 
-    std::map<long, int> getFactors(long n, const std::vector<long> &primes)
+    FactForm getFactors(long n, const std::vector<long> &primes)
     {
-        std::map<long, int> factors;
+        FactForm factors;
         while (n > 1)
         {
             long prime = *std::find_if(primes.begin(), primes.end(), [n](long prime)
