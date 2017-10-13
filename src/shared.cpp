@@ -58,4 +58,31 @@ namespace math
         }
         return factors;
     }
+
+    long reverseNum(long n)
+    {
+        long result = 0;
+        while (n > 0)
+        {
+            long remainder = n % 10;
+            result = result * 10 + remainder;
+            n /= 10;
+        }
+        return result;
+    }
+
+}
+
+namespace util
+{
+    bool isPalindrome(const std::string &str)
+    {
+        size_t len = str.size();
+        for (size_t i = 0; i < len / 2; ++i)
+        {
+            if (str[i] != str[len - i - 1])
+                return false;
+        }
+        return true;
+    }
 }
